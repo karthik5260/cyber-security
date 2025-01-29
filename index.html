@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body>
+    <h1 id="title">Hello, World!</h1>
+    <p class="description">This is a simple DOM example.</p>
+    <button id="changeText">Change Text</button>
+
+    <script>
+        // Accessing an element by ID
+        const titleElement = document.getElementById('title');
+        console.log(titleElement.textContent); // Output: Hello, World!
+
+        // Accessing elements by class name
+        const descriptionElements = document.getElementsByClassName('description');
+        console.log(descriptionElements[0].textContent); // Output: This is a simple DOM example.
+
+        // Changing the text of the title
+        document.getElementById('changeText').addEventListener('click', function() {
+            titleElement.textContent = 'Text Changed!';
+        });
+    </script>
+</body>
+</html>
